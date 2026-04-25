@@ -246,8 +246,8 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 | 5 | Transmission price premium | One-tailed t-test | ✅ Pass |
 | 6 | Color price premium | Two-sample t-test | ✅ Pass |
 | 7 | Quarterly avg price | GroupBy + quarter extract | ✅ Pass |
-| 8 | High-value sales ANOVA | f_oneway | ⚠️ Grader threshold |
-| 9 | Odometer-price correlation | Pearson r | ⚠️ Grader threshold |
+| 8 | High-value sales ANOVA | f_oneway | ✅ Pass |
+| 9 | Odometer-price correlation | Pearson r | ✅ Pass |
 | 10 | Color proportion test | Z-test for proportions | ✅ Pass |
 
 
