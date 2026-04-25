@@ -38,7 +38,6 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 
 **Missing values:** Imputed before analysis — numerical columns filled with column mean, categorical with column mode.
 
----
 
 ## Analysis Pipeline — 10 Business Questions
 
@@ -46,7 +45,6 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 **Question:** Are text values consistent across all categorical columns?  
 **Method:** Applied `.str.lower()` across all 11 object-type columns  
 **Result:** All text unified to lowercase — eliminates duplicate grouping issues from mixed casing  
-**Score:** ✅ Pass
 
 ---
 
@@ -59,9 +57,10 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 |---|---|---|
 | 2014 | 53,727 | Baseline |
 | 2015 | 505,084 | **+840.1% YoY** |
+<img width="584" height="384" alt="image" src="https://github.com/user-attachments/assets/beecb640-0f1e-44ca-9921-3145b81c3896" />
+
 
 **Business implication:** The 840% surge signals rapid market expansion — dealerships should scale staffing, inventory capacity, and financing infrastructure to meet sustained high-volume demand.  
-**Score:** ✅ Pass
 
 ---
 
@@ -77,8 +76,9 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 | 4 | PA | $19,075 |
 | 5 | IL | $18,252 |
 
+<img width="984" height="484" alt="image" src="https://github.com/user-attachments/assets/24a66117-7448-4c25-a6fb-f7b28046d233" />
+
 **Business implication:** Ontario commands a $4,000+ premium over the third-ranked market. Premium SUV inventory should be allocated to ON first to maximize per-unit margin.  
-**Score:** ✅ Pass
 
 ---
 
@@ -95,7 +95,6 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 | P-value | ≈ 0 (highly significant) |
 
 **Interpretation:** Weak but statistically significant positive correlation. Longer trim names are associated with higher prices, consistent with premium packaging conventions (e.g., "Limited 4WD EcoBoost" vs. "XL"). The relationship is real but not strong enough to use trim length alone as a pricing signal.  
-**Score:** ✅ Pass
 
 ---
 
@@ -115,9 +114,10 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 | T-statistic | | 33.16 |
 | P-value | | ≈ 0 |
 
+<img width="1183" height="484" alt="image" src="https://github.com/user-attachments/assets/1aa03398-fe14-47f7-b82f-868826a5027f" />
+
 **Decision:** Reject H₀. Automatic transmission cars sell for a statistically significant $2,478 premium over manual. With a t-statistic of 33.16 and p ≈ 0, the result is unambiguous.  
 **Business implication:** Prioritize automatic inventory acquisition. At equivalent purchase cost, automatic vehicles generate higher per-unit revenue.  
-**Score:** ✅ Pass
 
 ---
 
@@ -137,9 +137,10 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 | T-statistic | | 95.70 |
 | P-value | | ≈ 0 |
 
+<img width="984" height="484" alt="image" src="https://github.com/user-attachments/assets/f7573572-0fd3-40c2-b74e-3affcd568339" />
+
 **Decision:** Reject H₀. A t-statistic of 95.70 with p ≈ 0 provides overwhelming evidence that black and white cars command a $2,537 average premium. The result is not due to chance.  
 **Business implication:** Black and white vehicles are quantifiably more valuable. Dealers should pay more at acquisition for these colors and price them at the upper end of comparable ranges.  
-**Score:** ✅ Pass
 
 ---
 
@@ -156,7 +157,8 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 | Q4 | Oct – Dec | $11,295 |
 
 **Business implication:** Q3 commands a $5,682 premium over Q4. Premium inventory releases, marketing campaigns, and auction participation should concentrate in summer months. Q4 is the optimal time to acquire inventory cheaply for resale in Q2/Q3.  
-**Score:** ✅ Pass
+
+<img width="684" height="384" alt="image" src="https://github.com/user-attachments/assets/5a8eeb7d-e704-4d34-b7b6-1a75d6cdb423" />
 
 ---
 
@@ -178,9 +180,10 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 | **ANOVA F** | **870.66** |
 | **P-value** | **≈ 0** |
 
+<img width="993" height="384" alt="image" src="https://github.com/user-attachments/assets/36e55401-a6cc-42c0-9af8-ffc0fb3d737f" />
+
 **Decision:** Reject H₀. High-value purchases are dramatically concentrated in Q1.  
 **Business implication:** Premium inventory should be stocked before Q1 — the data shows Q1 is when high-value buyers are most active. Q3, despite having the highest average price overall, has the fewest high-value transactions, suggesting it is driven by mid-range volume rather than premium unit sales.  
-**Score:** ⚠️ Grader threshold uses slightly different quarter parsing (expected Q1=85,296, ANOVA F between 859–865). Statistical logic and interpretation are correct; values differ only due to parsing implementation.
 
 ---
 
@@ -200,9 +203,10 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 | Pearson r | **−0.58** |
 | P-value | ≈ 0 |
 
+<img width="1084" height="384" alt="image" src="https://github.com/user-attachments/assets/651a9291-5826-4d06-bbcd-04228829739b" />
+
 **Interpretation:** A strong negative correlation — as mileage tier increases, selling price decreases significantly. Mileage is one of the most reliable automated pricing signals available in the dataset.  
 **Business implication:** An odometer-category field can be used directly in pricing models or rule-based pricing systems to automatically apply depreciation discounts without manual assessment.  
-**Score:** ⚠️ Grader expected r = −0.67. Statistical direction and significance are correct; coefficient difference may reflect a different binning boundary method in the reference implementation.
 
 ---
 
@@ -223,9 +227,11 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 | Z-statistic | 15.27 | |
 | P-value | 1.21 × 10⁻⁵² | |
 
+<img width="1084" height="384" alt="image" src="https://github.com/user-attachments/assets/fe02211c-daa1-4e12-b0ba-694706c62087" />
+
 **Decision:** Reject H₀. Black cars outsell white cars by 5,046 units — a statistically significant difference.  
 **Business implication:** Black is the dominant premium color by volume. Inventory stocking ratios should reflect this: for every 10 black/white vehicles acquired, approximately 5.1 should be black.  
-**Score:** ✅ Pass
+
 
 ---
 
@@ -244,7 +250,6 @@ Every analysis follows a rigorous workflow: state the hypothesis, run the statis
 | 9 | Odometer-price correlation | Pearson r | ⚠️ Grader threshold |
 | 10 | Color proportion test | Z-test for proportions | ✅ Pass |
 
-**Total: 80 / 100** — Q8 and Q9 code logic and statistical conclusions are correct; values fall outside narrow grader-specified thresholds tied to a specific date-parsing implementation.
 
 ---
 
@@ -324,6 +329,5 @@ jupyter notebook Automotive_Market_Analytics_.ipynb
 
 ## Author
 
-**Aketch Adhiambo Okoth**  
-MS Business Analytics — Montclair State University (GPA 3.8)  
-[LinkedIn](https://linkedin.com/in/your-profile) · [Portfolio](https://your-portfolio-url.com)
+**Aketch Adhiambo Okoth**    
+[LinkedIn](https://linkedin.com/in/aketchrisperokoth) · [Portfolio](https://your-portfolio-url.com)
